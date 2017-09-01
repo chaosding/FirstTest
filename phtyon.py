@@ -196,3 +196,6 @@ items["error"] = ValueError
 items["append"] = nums.append
 print items["func"](-45)
 print items["mod"].sqrt(4)
+items["append"](15)
+print nums
+print (type(math))
