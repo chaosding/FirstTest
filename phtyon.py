@@ -66,6 +66,11 @@ dictionary_test={
 print dictionary_test["name"]
 #like json format
 
+#iteritems practice
+for key, iterrrq in dictionary_test.iteritems():
+       if key=="name":
+           print "QQ"
+
 #iteration and loop
 for n in [1,2,3,4,5,6,7,8]:
     print ("2 to the %d power is %d" % (n,2**n))  # ** represent power calculate
@@ -191,7 +196,7 @@ items={
 items["func"]=abs
 import math
 items["mod"] = math
-nums=[12,123,1234]
+nums=[12,123,134]
 items["error"] = ValueError
 items["append"] = nums.append
 print items["func"](-45)
@@ -199,3 +204,53 @@ print items["mod"].sqrt(4)
 items["append"](15)
 print nums
 print (type(math))
+
+#decorators
+def trace(func):
+    def GG(*args,**kwargs):
+        print("Call %s: %s, %s\n" %(func.__name__,args,kwargs))
+        r=func(*args,**kwargs)
+        return r
+    return GG
+@trace
+def square(x):
+    return x*x
+"""
+the preceding code is shorthand for the following:
+def square(x):
+    return x*x
+square = trace(square)
+"""
+square(6)
+
+
+event_handle={}
+def eventhandle(event):
+    def register_func(f):
+        event_handle[event]=f
+        return f
+    return register_func
+@eventhandle('button')
+def handld_button(msg):
+    print msg
+"""
+the preceding code is shorthand for the following:
+def handle_button(msg):
+    ...
+temp = eventhandle('button')
+handle_button = temp(handle_button)   
+"""    
+
+#Coroutines with Decorator
+def coroutine_par(func):
+    def start (*args,**kwargs):
+        g= func(*args,**kwargs)
+        g.next()
+        return g
+    return start
+@coroutine_par
+def recevier():
+    while True:
+        n=(yield)
+        print ("Get %s"%n)
+r=recevier()
