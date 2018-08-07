@@ -7,4 +7,11 @@
 （5）git add . -> git commit -m "massage" -> git push
 
 * 想取消多個檔案的修改 
-git checkout --
+1.git checkout -- .
+( "." is important. It's mean the current folder. )
+
+2.git stash save --keep-index
+
+Include --include-untracked if you'd want to be thorough about it.
+After that, you can drop that stash with a git stash drop command if you like.
+
