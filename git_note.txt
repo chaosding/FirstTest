@@ -15,3 +15,9 @@
 Include --include-untracked if you'd want to be thorough about it.
 After that, you can drop that stash with a git stash drop command if you like.
 
+3. git patch 
+git checkout master
+git format-patch cbc885b58218a6f1469288cd9cf868d5576b4d06 -1 (ID為指定commit log, -1代表只有那一個commit，同理-2就是指定commit+下一個commit，以此類退)
+git checkout wes-team
+git am ~/0001-Update-engtc-s-project-add-wireless-library-and-bina.patch (將上述的patch 利用"am" command 去應用到我們要應用的branch)
+
