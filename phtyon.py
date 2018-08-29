@@ -139,7 +139,7 @@ del a
 class partice_class_stack(object): #python class inherit by (). the example partice_class_stack is inherit object-class
     @classmethod
     def __init__(self):
-        self.stack=[]
+        self.stack=[] # [] is object array
     def push(self,object):
         self.stack.append(object)
     def pop(self):
