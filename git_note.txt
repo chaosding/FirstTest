@@ -21,3 +21,9 @@ git format-patch cbc885b58218a6f1469288cd9cf868d5576b4d06 -1 (ID為指定commit 
 git checkout wes-team
 git am ~/0001-Update-engtc-s-project-add-wireless-library-and-bina.patch (將上述的patch 利用"am" command 去應用到我們要應用的branch)
 
+*Push your branch to the remote repository:
+git push -u origin feature_branch_name
+
+
+*Cancel files on "wait to commit" stage:
+use "git reset $filename" to unstaged.

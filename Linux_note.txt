@@ -1,0 +1,13 @@
+1. 
+`. $script_path` is eqaul to `source $script_path`
+
+2.Reverseed words example:
+array=($1) #Would token by space
+totol=""
+for index in "${!array[@]}";
+do
+ total="${array[$index]} $total"
+done
+echo "$total"
+
+3.Bash shell support "return", but the value range is 0~255.
