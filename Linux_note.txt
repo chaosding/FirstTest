@@ -1,3 +1,10 @@
+Tool list:
+squashfs-tool ( file/directory compress)
+chroot & debootstrap ( switch root folder and install linux tool)
+docker ( It's similar to chroot tool , but it is more powerful.)
+meld ( GUI merge tool)
+
+
 1. 
 `. $script_path` is eqaul to `source $script_path`
 
@@ -11,3 +18,8 @@ done
 echo "$total"
 
 3.Bash shell support "return", but the value range is 0~255.
+
+4.
+cut -d' ' -f2- ( example for cut command to get delimiter character ~ "line end")
+
+
