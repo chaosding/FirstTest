@@ -2,6 +2,7 @@ Tool list:
 squashfs-tool ( file/directory compress)
 chroot & debootstrap ( switch root folder and install linux tool)
 docker ( It's similar to chroot tool , but it is more powerful.)
+alpine (smller Linux, its docker image less than 5 MB )
 meld ( GUI merge tool)
 
 
