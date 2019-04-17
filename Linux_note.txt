@@ -23,4 +23,4 @@ echo "$total"
 4.
 cut -d' ' -f2- ( example for cut command to get delimiter character ~ "line end")
 
-
+5. GUI shell ( whiptail or dialog )
